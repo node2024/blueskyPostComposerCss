@@ -26,14 +26,12 @@ body {
 
 /* 上のマージンボトムを削除 */
 .css-175oi2r[aria-modal="true"].r-13awgt0 {
-	margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
 }
 
-/* 
-    ついでにポストボタンも右下に変更して右下で投稿周りを完結できるように
-*/
+/* ついでにポストボタンも右下に変更して右下で投稿周りを完結できるように */
 button[aria-label="新しい投稿"] {
-		transition-duration: 0.25s;
+	transition-duration: 0.25s;
     position: fixed;
     bottom: 40px;
     right: 90px;
