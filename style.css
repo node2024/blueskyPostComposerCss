@@ -1,0 +1,54 @@
+/*******************
+    User JavaScript and CSSなどのChrome拡張機能を使用してください
+    Firefoxについては未確認ですが同じような拡張機能あればいけるかも？
+    また、CSSの命名規則などが変わった場合すぐに機能しなくなるのでその場合は無効にしてください
+*******************/
+
+/* ポストボタンを押したらスクロール向こうにするのを排除 */
+body {
+	overflow: auto !important;
+}
+
+/* 後ろのオーバーレイを削除してComposerを右下のデッドスペースに移動 */
+.css-175oi2r[aria-modal="true"] {
+	background-color: rgba(0, 0, 0, 0) !important;
+    width: 600px !important;
+    height: max-content !important;
+    visibility: initial !important;
+    top: initial !important;
+    left: initial !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    animation: fade forwards 0.3s ease;
+}
+
+/* 上のマージンボトムを削除 */
+.css-175oi2r[aria-modal="true"].r-13awgt0 {
+	margin-bottom: 0px !important;
+}
+
+/* 
+    ついでにポストボタンも右下に変更して右下で投稿周りを完結できるように
+*/
+button[aria-label="新しい投稿"] {
+		transition-duration: 0.25s;
+    position: fixed;
+    bottom: 40px;
+    right: 90px;
+    width: 200px;
+    padding: 15px;
+}
+
+/* コンポーザー出現用CSS */
+@keyframes fade {
+	0% {
+		opacity: 0;
+		margin-bottom: 0;
+	}
+	100% {
+		opacity: 1;
+		margin-bottom: 20px;
+	}
+}
